@@ -1,6 +1,6 @@
 # vagrant-java
 
-My Vagrant template for a quick and easy webserver running Java and Apache Maven (regular apache http server, PHP and MySQL is also included)
+My Vagrant template for a quick and easy webserver running Java and Apache Maven
 The setup forwards 8081 to 80 and 443 to 8444. This can be modified in the BootStrap file. The "weird" ports are chosed because this machine was originally created to run [openEHR's adl-designer](http://github.cm/openehr/adl-designer).
  
 ## Installation
