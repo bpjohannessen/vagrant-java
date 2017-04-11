@@ -1,0 +1,21 @@
+#! /bin/bash
+
+function install() {
+    sudo apt-get install -y $1 >/dev/null 2>&1 
+}
+
+programs="build-essential vim curl htop git make python-dev apache2 php php-mysql php-mysqlnd php-mdb2-driver-mysql lynx default-jdk maven" 
+
+echo "Installing web-server essentials... "
+
+sudo apt-get update >/dev/null 2>&1 
+
+echo "Starting to install extra programs"
+
+for program in $programs
+do 
+    echo "Current package: $program" 
+    install $program 
+done 
+
+echo "All done! Access webserver from localhost:8081 or go 'vagrant ssh' to access the server." 
